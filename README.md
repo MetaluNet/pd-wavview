@@ -1,7 +1,7 @@
 # wavview
 A waveform viewer for Pure Data.
 
-![wavview in action](https://github.com/user-attachments/assets/681f7b7d-332e-4a8e-a37b-60fe9e683777)
+![wavview in action](https://github.com/user-attachments/assets/75e465e4-8b58-4dc1-bb2d-f5a8034a4d6d)
 
 `wavview` is built using data structures.
 
