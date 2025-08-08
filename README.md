@@ -1,7 +1,7 @@
 # wavview
 A waveform viewer for Pure Data.
 
-![wavview in action](https://github.com/user-attachments/assets/75e465e4-8b58-4dc1-bb2d-f5a8034a4d6d)
+![wavview in action](https://github.com/user-attachments/assets/2bf9a284-d4cf-45b9-961f-b1ec47815f67)
 
 `wavview` is built using data structures.
 
@@ -20,3 +20,8 @@ Modulated frequency sweep:
 Modulated noise:
 
 ![Modulated noise](https://github.com/user-attachments/assets/b14f6263-1bd9-488f-9ff3-e484d4d6bdab)
+
+## Internal downsampling
+Internally, an important optimization is done: when updating to a new table, `wavview` computes 32-times-successively-downsampled min/max tables, to greatly decrease the CPU load in most drawing cases.
+
+For example, if the table is 60'000'000 samples long (~18mn at 48kHz) and the display is 400px wide, at fullscreen zoom each pixel has to take into account less than 5 values (60000000 / 400 / 32 / 32 / 32 = 4.5), instead of 150000 (= 60000000 / 400).
