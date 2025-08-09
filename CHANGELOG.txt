@@ -1,0 +1,12 @@
+CHANGELOG for wavview
+
+--------------------
+0.1
+
+initial release
+
+--------------------
+0.2
+
+peakbuffers caching via linking to table
+
