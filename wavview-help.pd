@@ -1,10 +1,13 @@
-#N struct 1005-array float x array bars 1005-bar 400 array regions 1005-region 3 array fgregions 1005-region 1;
+#N struct 1005-array float x array bars 1005-bar 1 array regions 1005-region 3 array fgregions 1005-region 1;
 #N struct 1005-bar float pos float min float max float width float color;
 #N struct 1005-region float x1 float x2 float y float width float color;
-#N struct 1006-array float x array bars 1006-bar 400 array regions 1006-region 3 array fgregions 1006-region 1;
-#N struct 1006-bar float pos float min float max float width float color;
-#N struct 1006-region float x1 float x2 float y float width float color;
-#N canvas 482 93 822 625 12;
+#N struct 1040-array float x array bars 1040-bar 1 array regions 1040-region 3 array fgregions 1040-region 1;
+#N struct 1040-bar float pos float min float max float width float color;
+#N struct 1040-region float x1 float x2 float y float width float color;
+#N struct 1042-main float x array marks 1042-mark 1 array front-marks 1042-mark 1 array front-regions 1042-region 1 array regions 1042-region 1;
+#N struct 1042-mark float x float y float color text time;
+#N struct 1042-region float x1 float x2 float y float width float color;
+#N canvas 482 93 822 664 12;
 #N canvas 0 0 450 250 (subpatch) 0;
 #X array \$0-table 62079 float 2;
 #A color 0;
@@ -473,6 +476,8 @@
 #X connect 18 0 6 0;
 #X connect 20 0 16 0;
 #X restore 217 502 pd linked_table_caching;
+#X obj 25 615 wavview_timeline \$0-view 400;
+#X text 25 595 see also: wavview_timeline (right click / Help);
 #X connect 1 0 13 0;
 #X connect 2 0 3 0;
 #X connect 4 0 30 0;
