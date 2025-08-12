@@ -1,4 +1,4 @@
-#N struct 1005-array float x array bars 1005-bar 400 array regions 1005-region 3 array fgregions 1005-region 1;
+#N struct 1005-array float x array bars 1005-bar 1 array regions 1005-region 3 array fgregions 1005-region 1;
 #N struct 1005-bar float pos float min float max float width float color;
 #N struct 1005-region float x1 float x2 float y float width float color;
 #N canvas 897 43 500 480 12;
@@ -18,8 +18,8 @@
 #X text 202 150 1;
 #X text 201 211 2;
 #X text 202 270 3;
-#X obj 22 25 struct \$0-array float x array bars \$0-bar 400 array regions \$0-region 3 array fgregions \$0-region 1, f 72;
 #X text 184 58 regions: 0=scrollbar 1=selection 2=scrollbar_bg;
+#X obj 22 25 struct \$0-array float x array bars \$0-bar array regions \$0-region 3 array fgregions \$0-region 1, f 72;
 #X connect 0 0 5 0;
 #X connect 1 0 4 0;
 #X connect 3 0 6 0;
