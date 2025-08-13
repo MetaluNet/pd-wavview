@@ -2,10 +2,15 @@
 
 PROJECT=wavview
 VERSION=$(git describe --abbrev=0)
-EXPORTDIR=$PROJECT
+EXPORTDIR=dist/$PROJECT
 rm -rf $EXPORTDIR
 mkdir -p $EXPORTDIR
 cp *.pd *.wav *.md LICENSE* CHANGELOG* $EXPORTDIR
-deken upload -v $VERSION $PROJECT
+
+cd $EXPORTDIR/..
+if [ $1x != testx ] ; then
+    deken upload -v $VERSION $PROJECT
+else deken package -v $VERSION $PROJECT
+fi
 
 
