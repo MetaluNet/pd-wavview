@@ -16,4 +16,5 @@ initial release
 - configurable scrollbar height
 - allow to drag the scrollbar
 - configurable scrollbar background color
-
+- new timeline object
+- use as zoom center the position of first click after pressing Shift
