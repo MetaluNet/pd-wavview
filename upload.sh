@@ -5,7 +5,7 @@ VERSION=$(git describe --abbrev=0)
 EXPORTDIR=dist/$PROJECT
 rm -rf $EXPORTDIR
 mkdir -p $EXPORTDIR
-cp *.pd *.wav *.md LICENSE* CHANGELOG* $EXPORTDIR
+cp wavview/* *.md LICENSE* CHANGELOG* $EXPORTDIR
 
 cd $EXPORTDIR/..
 if [ $1x != testx ] ; then
